@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BT Créditos × Ampler — Estratégia 360° e Proposta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:        #1E40AF;
+  --blue-mid:    #2563EB;
+  --blue-light:  #EFF6FF;
+  --blue-border: #BFDBFE;
+  --slate-900:   #0F172A;
+  --slate-700:   #334155;
+  --slate-500:   #64748B;
+  --slate-300:   #CBD5E1;
+  --slate-100:   #F1F5F9;
+  --white:       #FFFFFF;
+  --bg:          #F8FAFC;
+  --radius:      12px;
+  --radius-sm:   8px;
+  --linkedin:    #0A66C2;
+  --meta:        #1877F2;
+  --google:      #4285F4;
+  --apollo:      #F97316;
+  --green:       #059669;
+  --green-light: #ECFDF5;
+  --green-border:#A7F3D0;
+  --amber:       #D97706;
+  --amber-light: #FFFBEB;
+  --amber-border:#FDE68A;
+  --red:         #DC2626;
+  --red-light:   #FEF2F2;
+  --red-border:  #FECACA;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--slate-700); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+section { padding: 72px 0; }
+section:nth-child(even) { background: var(--white); }
+.section-label { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.section-title { font-size: clamp(22px, 4vw, 28px); font-weight: 700; color: var(--slate-900); line-height: 1.25; margin-bottom: 8px; }
+.section-sub { font-size: 16px; color: var(--slate-500); max-width: 600px; margin-bottom: 48px; }
+
+/* HERO */
+.hero { background: var(--white); border-bottom: 1px solid var(--slate-300); padding: 80px 0 72px; text-align: center; }
+.hero-eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; }
+.hero-x { font-size: 13px; color: var(--slate-300); font-weight: 300; }
+.hero h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: var(--slate-900); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 16px; }
+.hero p { font-size: 17px; color: var(--slate-500); max-width: 540px; margin: 0 auto 40px; line-height: 1.65; }
+.hero-meta { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.hero-meta-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.hero-meta-item strong { font-size: 24px; font-weight: 700; color: var(--blue); }
+.hero-meta-item span { font-size: 12px; color: var(--slate-500); text-align: center; }
+.hero-divider { width: 1px; height: 40px; background: var(--slate-300); }
+.confidential-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--slate-100); color: var(--slate-500); border-radius: 6px; padding: 4px 12px; font-size: 11px; font-weight: 500; margin-bottom: 20px; border: 1px solid var(--slate-300); }
+
+/* CHANNEL CARDS */
+.campaign-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.campaign-card { background: var(--white); border: 1px solid var(--slate-300); border-top: 4px solid var(--blue); border-radius: var(--radius); padding: 24px; }
+.campaign-card.apollo   { border-top-color: var(--apollo); }
+.campaign-card.linkedin { border-top-color: var(--linkedin); }
+.campaign-card.meta-c   { border-top-color: var(--meta); }
+.campaign-card.google-c { border-top-color: var(--google); }
+.campaign-card-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; border-radius: 4px; padding: 3px 8px; margin-bottom: 14px; }
+.tag-apollo   { background: #FFF7ED; color: var(--apollo); }
+.tag-linkedin { background: #EBF4FD; color: var(--linkedin); }
+.tag-meta     { background: #EAF1FE; color: var(--meta); }
+.tag-google   { background: #EAF0FE; color: var(--google); }
+.tag-new { background: var(--green-light); color: var(--green); font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 3px; letter-spacing: .05em; }
+.campaign-card h3 { font-size: 15px; font-weight: 700; color: var(--slate-900); margin-bottom: 14px; line-height: 1.3; }
+.campaign-row { display: flex; flex-direction: column; gap: 10px; }
+.campaign-item { display: flex; gap: 10px; align-items: flex-start; }
+.campaign-item-icon { width: 28px; height: 28px; background: var(--slate-100); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.campaign-item-icon svg { width: 13px; height: 13px; fill: none; stroke: var(--blue-mid); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.campaign-item-label { font-size: 10px; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 1px; }
+.campaign-item-value { font-size: 13px; font-weight: 500; color: var(--slate-900); line-height: 1.35; }
+
+/* STEPS */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.steps::before { content: ''; position: absolute; top: 24px; left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 2px; background: var(--blue-border); }
+.step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 10px; }
+.step-num { width: 48px; height: 48px; background: var(--blue); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; margin-bottom: 16px; position: relative; z-index: 1; flex-shrink: 0; }
+.step-title { font-size: 13px; font-weight: 600; color: var(--slate-900); margin-bottom: 6px; }
+.step-desc { font-size: 12px; color: var(--slate-500); line-height: 1.5; }
+
+/* AUDIENCE */
+.audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.audience-card { background: var(--bg); border: 1px solid var(--slate-300); border-radius: var(--radius); padding: 28px; }
+.audience-card-num { font-size: 11px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.audience-card h3 { font-size: 17px; font-weight: 700; color: var(--slate-900); margin-bottom: 16px; }
+.roles-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.role-tag { background: var(--white); border: 1px solid var(--slate-300); border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 500; color: var(--slate-700); }
+.audience-meta { font-size: 13px; color: var(--slate-500); border-top: 1px solid var(--slate-300); padding-top: 14px; line-height: 1.55; }
+.audience-meta strong { color: var(--slate-700); }
+.tam-highlight { display: flex; align-items: baseline; gap: 6px; margin-bottom: 10px; }
+.tam-num { font-size: 26px; font-weight: 700; color: var(--blue); line-height: 1; }
+.tam-label { font-size: 13px; color: var(--slate-500); }
+
+/* FORMAT SECTION */
+.format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-bottom: 56px; }
+.format-text h3 { font-size: 18px; font-weight: 700; color: var(--slate-900); margin-bottom: 10px; }
+.format-text p { color: var(--slate-500); font-size: 14px; margin-bottom: 18px; line-height: 1.65; }
+.format-benefit { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+.format-benefit-dot { width: 18px; height: 18px; background: var(--blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.format-benefit span { font-size: 13px; color: var(--slate-700); line-height: 1.5; }
+
+/* Apollo email mockup */
+.email-mockup { background: var(--white); border: 1px solid var(--slate-300); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,.06); font-family: 'Inter', sans-serif; }
+.email-header { background: var(--slate-100); padding: 10px 14px; border-bottom: 1px solid var(--slate-300); display: flex; align-items: center; gap: 6px; }
+.email-dot { width: 10px; height: 10px; border-radius: 50%; }
+.email-dot-r { background: #FC5F5A; }
+.email-dot-y { background: #FDBB2F; }
+.email-dot-g { background: #25C93F; }
+.email-body { padding: 18px 20px; }
+.email-from { font-size: 11px; color: var(--slate-500); margin-bottom: 4px; }
+.email-subject { font-size: 14px; font-weight: 600; color: var(--slate-900); margin-bottom: 14px; }
+.email-text { font-size: 13px; color: var(--slate-700); line-height: 1.6; }
+.email-text p { margin-bottom: 10px; }
+.email-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--apollo); color: #fff; border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; margin-top: 8px; }
+.sequence-badge { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--slate-500); margin-top: 12px; border-top: 1px solid var(--slate-100); padding-top: 10px; }
+
+/* LinkedIn ad mockup */
+.linkedin-mockup { background: var(--white); border: 1px solid #D0D5DD; border-radius: 8px; overflow: hidden; font-family: 'Inter', sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.linkedin-header { padding: 12px 14px; display: flex; align-items: flex-start; gap: 10px; }
+.linkedin-avatar { width: 40px; height: 40px; background: linear-gradient(135deg, #0A66C2, #1E40AF); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #fff; flex-shrink: 0; }
+.linkedin-name { font-size: 13px; font-weight: 600; color: #000; }
+.linkedin-title { font-size: 11px; color: #666; }
+.linkedin-promoted { font-size: 10px; color: #666; display: flex; align-items: center; gap: 3px; }
+.linkedin-copy { padding: 0 14px 12px; font-size: 13px; color: #333; line-height: 1.5; }
+.linkedin-image { height: 140px; background: linear-gradient(135deg, #0A66C2 0%, #1E40AF 60%, #0F172A 100%); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.linkedin-image-text { color: #fff; font-size: 16px; font-weight: 700; text-align: center; line-height: 1.3; }
+.linkedin-cta-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: #F3F2EF; }
+.linkedin-url-label { font-size: 11px; color: #666; }
+.linkedin-headline { font-size: 13px; font-weight: 600; color: #000; }
+.linkedin-cta-btn { background: transparent; border: 1px solid #0A66C2; color: #0A66C2; border-radius: 16px; padding: 5px 14px; font-size: 13px; font-weight: 600; }
+
+/* PROJECTION TABLE */
+.projection-table { width: 100%; border-collapse: collapse; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--slate-300); }
+.projection-table thead { background: var(--blue); color: var(--white); }
+.projection-table thead th { padding: 14px 16px; text-align: left; font-size: 12px; font-weight: 600; letter-spacing: .03em; }
+.projection-table tbody tr { border-bottom: 1px solid var(--slate-300); }
+.projection-table tbody tr:last-child { border-bottom: none; }
+.projection-table tbody tr:nth-child(odd) { background: var(--white); }
+.projection-table tbody tr:nth-child(even) { background: var(--blue-light); }
+.projection-table td { padding: 14px 16px; font-size: 14px; color: var(--slate-700); vertical-align: middle; }
+.projection-table td:first-child { font-weight: 600; color: var(--slate-900); }
+.proj-num { text-align: right; font-weight: 700; color: var(--blue); font-variant-numeric: tabular-nums; }
+.proj-highlight { font-size: 15px; font-weight: 700; color: var(--green) !important; }
+.scenario-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 6px; }
+.sc-setup   { background: var(--amber-light); color: var(--amber); }
+.sc-growth  { background: var(--blue-light); color: var(--blue-mid); }
+.sc-scale   { background: var(--green-light); color: var(--green); }
+.projection-note { margin-top: 12px; font-size: 13px; color: var(--slate-500); display: flex; align-items: flex-start; gap: 6px; line-height: 1.5; }
+
+/* LP CARDS */
+.lp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.lp-card { background: var(--white); border: 1px solid var(--slate-300); border-radius: var(--radius); padding: 24px; }
+.lp-card-url { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11px; background: var(--slate-100); color: var(--slate-500); padding: 5px 10px; border-radius: 5px; margin-bottom: 14px; display: inline-block; }
+.lp-card h3 { font-size: 15px; font-weight: 700; color: var(--slate-900); margin-bottom: 14px; }
+.lp-items { display: flex; flex-direction: column; gap: 8px; }
+.lp-item { display: flex; gap: 8px; align-items: flex-start; }
+.lp-item-icon { width: 24px; height: 24px; background: var(--blue-light); border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.lp-item-icon svg { width: 12px; height: 12px; stroke: var(--blue-mid); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lp-item span { font-size: 13px; color: var(--slate-700); line-height: 1.4; padding-top: 3px; }
+
+/* FINANCIAL PROPOSAL */
+.proposal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.proposal-phase { background: var(--white); border: 1px solid var(--slate-300); border-radius: var(--radius); padding: 24px; }
+.proposal-phase.active { border-color: var(--blue-border); background: var(--blue-light); }
+.proposal-phase-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+.proposal-phase h3 { font-size: 17px; font-weight: 700; color: var(--slate-900); margin-bottom: 6px; }
+.proposal-phase-period { font-size: 12px; color: var(--slate-500); margin-bottom: 16px; }
+.proposal-fee-row { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+.proposal-fee-label { font-size: 13px; color: var(--slate-500); }
+.proposal-fee-value { font-size: 18px; font-weight: 700; color: var(--blue); }
+.proposal-separator { height: 1px; background: var(--slate-300); margin: 14px 0; }
+.proposal-deliverables { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.proposal-deliverables li { font-size: 13px; color: var(--slate-700); display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
+.proposal-deliverables li::before { content: '›'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.commission-example { background: var(--slate-900); border-radius: var(--radius); padding: 20px 24px; margin-top: 24px; }
+.commission-example h4 { font-size: 13px; font-weight: 600; color: #94A3B8; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 16px; }
+.commission-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #1E293B; }
+.commission-row:last-child { border-bottom: none; }
+.commission-scenario { font-size: 13px; color: #94A3B8; }
+.commission-total { font-size: 16px; font-weight: 700; }
+.c-conserv { color: #FCD34D; }
+.c-target   { color: #6EE7B7; }
+.c-scale    { color: #93C5FD; }
+.commission-breakdown { font-size: 11px; color: #64748B; display: block; margin-top: 2px; }
+.attribution-box { background: var(--bg); border: 1px solid var(--slate-300); border-radius: var(--radius-sm); padding: 16px; margin-top: 20px; }
+.attribution-box h5 { font-size: 12px; font-weight: 600; color: var(--slate-900); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.attribution-list { display: flex; flex-direction: column; gap: 6px; }
+.attr-item { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.attr-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.attr-digital { background: var(--green); }
+.attr-org     { background: var(--slate-300); }
+.attr-text { color: var(--slate-700); }
+.attr-badge { font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 3px; margin-left: auto; }
+.attr-yes { background: var(--green-light); color: var(--green); }
+.attr-no  { background: var(--slate-100); color: var(--slate-500); }
+
+/* CHECKLIST */
+.checklist { display: flex; flex-direction: column; gap: 12px; }
+.check-item { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--slate-300); border-radius: var(--radius-sm); padding: 16px 18px; transition: border-color .2s; }
+.check-item:hover { border-color: var(--blue-border); }
+.check-box { width: 22px; height: 22px; border: 2px solid var(--slate-300); border-radius: 5px; flex-shrink: 0; margin-top: 2px; }
+.check-num { width: 26px; height: 26px; background: var(--blue-light); color: var(--blue); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.check-text { flex: 1; }
+.check-text strong { display: block; font-size: 14px; font-weight: 600; color: var(--slate-900); margin-bottom: 2px; }
+.check-text span { font-size: 12px; color: var(--slate-500); }
+.check-owner { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; margin-top: 3px; white-space: nowrap; }
+.owner-ampler { background: var(--blue-light);  color: var(--blue); }
+.owner-bt     { background: var(--amber-light); color: var(--amber); }
+.owner-both   { background: var(--green-light); color: var(--green); }
+
+/* APOLLO SEQUENCE */
+.sequence-timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+.sequence-timeline::before { content: ''; position: absolute; left: 20px; top: 10px; bottom: 10px; width: 2px; background: var(--blue-border); }
+.seq-item { display: flex; align-items: flex-start; gap: 16px; padding: 12px 0; position: relative; }
+.seq-dot { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; font-size: 11px; font-weight: 700; }
+.seq-dot.email    { background: #FFF7ED; color: var(--apollo); border: 2px solid #FED7AA; }
+.seq-content { flex: 1; }
+.seq-day { font-size: 10px; font-weight: 600; color: var(--slate-500); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; }
+.seq-action { font-size: 13px; font-weight: 600; color: var(--slate-900); margin-bottom: 2px; }
+.seq-detail { font-size: 12px; color: var(--slate-500); }
+
+footer { background: var(--slate-900); color: #64748B; padding: 40px 0; text-align: center; }
+footer p { font-size: 13px; line-height: 1.7; max-width: 640px; margin: 0 auto; }
+footer strong { color: #CBD5E1; }
+
+@media (max-width: 700px) {
+  section { padding: 52px 0; }
+  .campaign-grid, .audience-grid, .lp-grid, .format-grid, .proposal-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 24px; }
+  .steps::before { display: none; }
+  .step { flex-direction: row; text-align: left; gap: 14px; }
+  .step-num { margin-bottom: 0; }
+  .hero-meta { gap: 20px; }
+  .hero-divider { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ── TOOLTIPS ── */
+.tip {
+  border-bottom: 1.5px dashed var(--blue-mid);
+  cursor: help;
+  position: relative;
+  display: inline;
+  color: inherit;
+}
+.tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--slate-900);
+  color: #E2E8F0;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0,0,0,.22);
+  border: 1px solid #1E293B;
+}
+.tip:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── KEYFRAMES ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── ENTRANCE ANIMATIONS ── */
+.hero-badge       { animation: scaleIn .35s ease both; }
+.hero-badge:nth-child(1) { animation-delay: .05s; }
+.hero-badge:nth-child(3) { animation-delay: .15s; }
+.hero h1          { animation: fadeSlideUp .45s ease both .1s; }
+.hero p           { animation: fadeSlideUp .45s ease both .2s; }
+.hero-meta        { animation: fadeSlideUp .45s ease both .3s; }
+
+.campaign-card    { animation: fadeSlideUp .4s ease both; }
+.campaign-card:nth-child(1) { animation-delay: .05s; }
+.campaign-card:nth-child(2) { animation-delay: .13s; }
+.campaign-card:nth-child(3) { animation-delay: .21s; }
+
+.step             { animation: fadeSlideUp .4s ease both; }
+.step:nth-child(1){ animation-delay: .06s; }
+.step:nth-child(2){ animation-delay: .14s; }
+.step:nth-child(3){ animation-delay: .22s; }
+.step:nth-child(4){ animation-delay: .30s; }
+
+.audience-card    { animation: fadeSlideUp .4s ease both; }
+.audience-card:nth-child(1) { animation-delay: .05s; }
+.audience-card:nth-child(2) { animation-delay: .15s; }
+
+.lp-card          { animation: fadeSlideUp .4s ease both; }
+.lp-card:nth-child(1) { animation-delay: .05s; }
+.lp-card:nth-child(2) { animation-delay: .13s; }
+.lp-card:nth-child(3) { animation-delay: .21s; }
+
+.proposal-phase   { animation: fadeSlideUp .4s ease both; }
+.proposal-phase:nth-child(1) { animation-delay: .05s; }
+.proposal-phase:nth-child(2) { animation-delay: .15s; }
+
+.check-item       { animation: fadeSlideUp .35s ease both; }
+.check-item:nth-child(1) { animation-delay: .04s; }
+.check-item:nth-child(2) { animation-delay: .09s; }
+.check-item:nth-child(3) { animation-delay: .14s; }
+.check-item:nth-child(4) { animation-delay: .19s; }
+.check-item:nth-child(5) { animation-delay: .24s; }
+.check-item:nth-child(6) { animation-delay: .29s; }
+.check-item:nth-child(7) { animation-delay: .34s; }
+
+.seq-item         { animation: fadeSlideUp .35s ease both; }
+.seq-item:nth-child(1) { animation-delay: .05s; }
+.seq-item:nth-child(2) { animation-delay: .12s; }
+.seq-item:nth-child(3) { animation-delay: .19s; }
+.seq-item:nth-child(4) { animation-delay: .26s; }
+
+.commission-example { animation: fadeIn .5s ease both .1s; }
+.attribution-box    { animation: fadeIn .5s ease both .15s; }
+
+/* ── HOVER ENHANCEMENTS ── */
+.campaign-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .2s;
+  will-change: transform;
+}
+.campaign-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.1);
+}
+.audience-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.audience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.09);
+}
+.lp-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.lp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.08);
+}
+.proposal-phase {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.proposal-phase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.1);
+}
+.check-item {
+  transition: border-color .2s, transform .2s ease, box-shadow .2s;
+}
+.check-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.07);
+}
+.seq-item {
+  transition: transform .2s ease;
+}
+.seq-item:hover {
+  transform: translateX(5px);
+}
+.commission-row {
+  transition: background .18s;
+  cursor: default;
+}
+.commission-row:hover {
+  background: rgba(255,255,255,.05);
+  border-radius: 6px;
+}
+.attr-item {
+  transition: background .15s;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: 0 -6px;
+}
+.attr-item:hover {
+  background: var(--blue-light);
+}
+.role-tag {
+  transition: background .15s, border-color .15s, transform .15s;
+  cursor: default;
+}
+.role-tag:hover {
+  background: var(--blue-light);
+  border-color: var(--blue-border);
+  transform: translateY(-1px);
+}
+.step-num {
+  transition: transform .2s ease, box-shadow .2s;
+}
+.step:hover .step-num {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(30,64,175,.3);
+}
+.hero-meta-item strong {
+  transition: transform .2s;
+  display: block;
+}
+.hero-meta-item:hover strong {
+  transform: scale(1.07);
+}
+.projection-table tbody tr {
+  transition: background .15s;
+}
+.projection-table tbody tr:hover {
+  background: var(--blue-light) !important;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════ 1. HERO ════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="confidential-tag">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Confidencial · Proposta exclusiva BT Créditos
+    </div>
+    <div class="hero-eyebrow" style="align-items:center;">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEzWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI1LTExLTI3PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkV4dElkPjQ3Y2MxY2Q2LTg4OGQtNGY0NS1hYjhlLTI3ZTU5NzYxZWI3OTwvQXR0cmliOkV4dElkPgogICAgIDxBdHRyaWI6RmJJZD41MjUyNjU5MTQxNzk1ODA8L0F0dHJpYjpGYklkPgogICAgIDxBdHRyaWI6VG91Y2hUeXBlPjI8L0F0dHJpYjpUb3VjaFR5cGU+CiAgICA8L3JkZjpsaT4KICAgPC9yZGY6U2VxPgogIDwvQXR0cmliOkFkcz4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6ZGM9J2h0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvJz4KICA8ZGM6dGl0bGU+CiAgIDxyZGY6QWx0PgogICAgPHJkZjpsaSB4bWw6bGFuZz0neC1kZWZhdWx0Jz5Mb2dvIGFtcGxlciBQJmFtcDtCIC0gYW1wbGVyLWJsYWNrPC9yZGY6bGk+CiAgIDwvcmRmOkFsdD4KICA8L2RjOnRpdGxlPgogPC9yZGY6RGVzY3JpcHRpb24+Cgog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" style="height:36px;width:auto;object-fit:contain;filter:grayscale(100%);opacity:.85;animation:scaleIn .35s ease both .05s;">
+      <div class="hero-badge" style="background:#FFF7ED;color:#92400E;border-color:#FED7AA;">BT Créditos</div>
+    </div>
+    <h1>Estratégia 360°<br>Google · Meta · Apollo</h1>
+    <p>Planejamento completo de crescimento digital com outbound, exportação de listas para audiências e modelo de remuneração baseado em resultado.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <strong>R$20M</strong>
+        <span>Meta anual<br>receita digital</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-meta-item">
+        <strong>3</strong>
+        <span>Canais integrados<br>(1 novo)</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-meta-item">
+        <strong>143K+</strong>
+        <span>Advogados<br>trabalhistas no Brasil</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-meta-item">
+        <strong>3,5%</strong>
+        <span>Comissão sobre<br>deals digitais</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 2. CANAIS ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Os canais</div>
+    <h2 class="section-title">3 canais integrados, 1 estratégia</h2>
+    <p class="section-sub">Apollo é o canal novo de outbound. Meta e Google continuam, corrigidos e com listas do Apollo alimentando as audiências.</p>
+    <div class="campaign-grid">
+
+      <div class="campaign-card apollo">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:14px;">
+          <span class="campaign-card-tag tag-apollo">Apollo</span>
+          <span class="tag-new">NOVO</span>
+        </div>
+        <h3>Outbound para Advogados Trabalhistas</h3>
+        <div class="campaign-row">
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Público</div>
+              <div class="campaign-item-value">Advogados trabalhistas — sócios e autônomos</div>
+            </div>
+          </div>
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Cadência</div>
+              <div class="campaign-item-value">4 emails em 11 dias — cadência 100% email</div>
+            </div>
+          </div>
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Volume mensal</div>
+              <div class="campaign-item-value">500 contatos · estimativa 15 SQLs/mês</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="campaign-card meta-c">
+        <div style="margin-bottom:14px;">
+          <span class="campaign-card-tag tag-meta">Meta Ads</span>
+        </div>
+        <h3>Reclamantes PF + Advogados Otimizado</h3>
+        <div class="campaign-row">
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Fixes prioritários</div>
+              <div class="campaign-item-value"><span class="tip" data-tip="Conversions API — rastreamento de conversões server-side do Meta">CAPI</span> + Lookalike 11K clientes + LPs novas</div>
+            </div>
+          </div>
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Budget</div>
+              <div class="campaign-item-value">R$2.000/mês (PF + B2B advogados)</div>
+            </div>
+          </div>
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Nova audiência</div>
+              <div class="campaign-item-value">Matched Audience da lista Apollo exportada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="campaign-card google-c">
+        <div style="margin-bottom:14px;">
+          <span class="campaign-card-tag tag-google">Google Ads</span>
+        </div>
+        <h3>Search + PMax Corrigido</h3>
+        <div class="campaign-row">
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Correção urgente</div>
+              <div class="campaign-item-value">Evento de conversão (119% <span class="tip" data-tip="CVR (Conversion Rate) — taxa de conversão: conversões ÷ cliques. Acima de 100% indica erro no rastreamento">CVR</span> = inválido)</div>
+            </div>
+          </div>
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Budget</div>
+              <div class="campaign-item-value">R$1.000/mês + Customer Match Apollo</div>
+            </div>
+          </div>
+          <div class="campaign-item">
+            <div class="campaign-item-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div>
+              <div class="campaign-item-label">Meta de <span class="tip" data-tip="QS (Quality Score) — nota de qualidade do Google Ads de 1 a 10. Quanto maior, menor o CPC">QS</span></div>
+              <div class="campaign-item-value">De 5/10 para 7+/10 com LPs dedicadas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 3. O FLUXO ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">O fluxo</div>
+    <h2 class="section-title">A máquina de leads: como funciona</h2>
+    <p class="section-sub">A grande diferença em relação ao que existe hoje: o mesmo advogado é atingido por 3 canais ao mesmo tempo, e chega preparado para a conversa comercial.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Onipresença</div>
+        <div class="step-desc">O mesmo advogado recebe email do Apollo E vê anúncio no Meta na mesma semana — efeito de onipresença que multiplica a taxa de resposta.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">LP qualificadora</div>
+        <div class="step-desc">Ao clicar, cai em LP específica por perfil. O copy já menciona os requisitos (acórdão, solvência, valor mínimo) — leads inelegíveis se filtram sozinhos.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Pré-qualificação</div>
+        <div class="step-desc">Formulário integrado direto ao sistema BT (sem planilha manual). Inelegíveis recebem resposta automática. Elegíveis entram na fila do comercial em menos de 2h.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Lead aquecido</div>
+        <div class="step-desc">Antes da ligação: sequência de 3 mensagens WhatsApp/email explicando o processo, case similar e proposta. O lead chega pronto para decidir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 4. PÚBLICO ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Segmentação</div>
+    <h2 class="section-title">Dois ICPs, uma estratégia integrada</h2>
+    <p class="section-sub">O foco principal vai para advogados (B2B) via Apollo outbound. Reclamantes PF continuam com Meta + Google, otimizados com listas do Apollo como audiência.</p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-card-num"><span class="tip" data-tip="Ideal Customer Profile — perfil de cliente ideal da BT Créditos">ICP</span> 01 · Prioridade Alta · B2B</div>
+        <div class="tam-highlight">
+          <span class="tam-num">143K</span>
+          <span class="tam-label">advogados trabalhistas no Brasil</span>
+        </div>
+        <h3>Advogados Trabalhistas</h3>
+        <div class="roles-list">
+          <span class="role-tag">Sócio de escritório</span>
+          <span class="role-tag">Advogado autônomo</span>
+          <span class="role-tag">Advogado associado</span>
+          <span class="role-tag">Especialista trabalhista</span>
+        </div>
+        <div class="audience-meta">
+          <strong>Dor principal:</strong> esperar 3-5 anos para receber honorários com custos fixos de escritório.<br><br>
+          <strong>Canais:</strong> Apollo outbound (5K-15K emails verificados) → Meta Matched Audience → Google Customer Match.<br><br>
+          <strong>Por que este ICP:</strong> o advogado já conhece o processo, já trabalhou com a BT indiretamente e tem múltiplos casos — vira um canal recorrente.
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-card-num"><span class="tip" data-tip="Ideal Customer Profile — perfil de cliente ideal da BT Créditos">ICP</span> 02 · Continuidade · B2C</div>
+        <div class="tam-highlight">
+          <span class="tam-num">10,1M</span>
+          <span class="tam-label">processos trabalhistas ativos no Brasil</span>
+        </div>
+        <h3>Reclamantes Trabalhistas (PF)</h3>
+        <div class="roles-list">
+          <span class="role-tag">Ex-funcionário CLT</span>
+          <span class="role-tag">Processo pós-acórdão</span>
+          <span class="role-tag">Empresa ré solvente</span>
+          <span class="role-tag">Valor acima de R$50K</span>
+        </div>
+        <div class="audience-meta">
+          <strong>Dor principal:</strong> processo parado há anos, precisa do dinheiro agora (saúde, dívida, oportunidade).<br><br>
+          <strong>Canais:</strong> Google Search (intenção quente) + Meta Feed/Reels (descoberta) + Lookalike 1% dos 11.000 clientes fechados.<br><br>
+          <strong>Desafio:</strong> alto volume de leads, baixa elegibilidade. LPs novas pré-filtram antes do formulário.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 5. OS FORMATOS ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Os formatos</div>
+    <h2 class="section-title">Como o advogado encontra a BT Créditos</h2>
+    <p class="section-sub">Apollo é o novo canal de outbound. Abaixo, como a cadência funciona na prática — e como a lista exportada alimenta Meta e Google.</p>
+
+    <!-- Apollo -->
+    <div class="format-grid">
+      <div class="format-text">
+        <h3>Apollo Outbound — Cadência 4 emails</h3>
+        <p>Prospecção inteligente: o Apollo identifica advogados trabalhistas no Brasil, verifica os emails e aciona uma sequência de 4 emails em 11 dias, totalmente automatizada. A lista exportada ainda alimenta Meta e Google como Custom Audience.</p>
+        <div class="format-benefit">
+          <div class="format-benefit-dot"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Lista exportada alimenta Meta e Google como audiência quente (Custom Audience)</span>
+        </div>
+        <div class="format-benefit">
+          <div class="format-benefit-dot"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Personalização com nome, escritório e especialidade aumenta taxa de resposta 3-5×</span>
+        </div>
+        <div class="format-benefit">
+          <div class="format-benefit-dot"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Benchmark Brasil: 40% abertura, 8% resposta, 3% <span class="tip" data-tip="SQL (Sales Qualified Lead) — lead que passou pela pré-qualificação do sistema BT">SQL</span> — 15 leads/mês de 500 disparos</span>
+        </div>
+
+        <!-- Sequence timeline -->
+        <div style="margin-top: 20px;">
+          <div style="font-size: 12px; font-weight: 600; color: var(--slate-500); letter-spacing: .07em; text-transform: uppercase; margin-bottom: 12px;">Cadência de contatos</div>
+          <div class="sequence-timeline">
+            <div class="seq-item">
+              <div class="seq-dot email">E1</div>
+              <div class="seq-content">
+                <div class="seq-day">Dia 0 — Email</div>
+                <div class="seq-action">Apresentação personalizada</div>
+                <div class="seq-detail">"Dr. [Nome], vi que você é especialista em trabalhista em [cidade]..."</div>
+              </div>
+            </div>
+            <div class="seq-item">
+              <div class="seq-dot email">E2</div>
+              <div class="seq-content">
+                <div class="seq-day">Dia 3 — Email follow-up</div>
+                <div class="seq-action">Case de sucesso + prova social</div>
+                <div class="seq-detail">"Advogados como você já anteciparam R$X em honorários com a BT..."</div>
+              </div>
+            </div>
+            <div class="seq-item">
+              <div class="seq-dot email">E3</div>
+              <div class="seq-content">
+                <div class="seq-day">Dia 7 — Email de valor</div>
+                <div class="seq-action">Conteúdo útil + reforço</div>
+                <div class="seq-detail">Artigo sobre fluxo de caixa para escritórios trabalhistas</div>
+              </div>
+            </div>
+            <div class="seq-item">
+              <div class="seq-dot email">E4</div>
+              <div class="seq-content">
+                <div class="seq-day">Dia 11 — Break-up email</div>
+                <div class="seq-action">Última tentativa com CTA direto</div>
+                <div class="seq-detail">"Faz sentido 15 minutos para eu mostrar como funciona?"</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="email-mockup">
+        <div class="email-header">
+          <div class="email-dot email-dot-r"></div>
+          <div class="email-dot email-dot-y"></div>
+          <div class="email-dot email-dot-g"></div>
+          <span style="font-size:11px;color:#64748B;margin-left:6px;">Email Apollo — Dia 0</span>
+        </div>
+        <div class="email-body">
+          <div class="email-from">De: Comercial BT Créditos &lt;comercial@btcreditos.com.br&gt; · via Apollo</div>
+          <div class="email-subject">Dr. Carlos — seus honorários trabalhistas podem entrar agora</div>
+          <div class="email-text">
+            <p>Olá, Dr. Carlos,</p>
+            <p>Vi que você é sócio do escritório Sousa & Associados em São Paulo e atua principalmente em reclamações trabalhistas. Bom trabalho.</p>
+            <p>Pergunta direta: você já considerou receber seus honorários agora, antes do trânsito em julgado?</p>
+            <p>A BT Créditos compra esses créditos com análise em 24h. Já antecipamos mais de <strong>R$3,1 bilhões</strong> para mais de 11.000 casos.</p>
+            <p>Vale 15 minutos para conhecer?</p>
+            <p style="margin-bottom:4px;">Abs,<br><strong>Time Comercial — BT Créditos</strong></p>
+          </div>
+          <div class="email-cta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.72 12 19.79 19.79 0 0 1 1.65 3.42 2 2 0 0 1 3.63 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.82-.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+            Agendar 15 minutos
+          </div>
+          <div class="sequence-badge">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Touchpoint 1 de 5 · se não responder, continua automaticamente
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════ 6. PROJEÇÃO ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Expectativas</div>
+    <h2 class="section-title">3 cenários de crescimento</h2>
+    <p class="section-sub">Projeções baseadas em benchmarks de outbound B2B Brasil + paid media para lawtech. Ticket médio BT: R$160.000. Close rate comercial estimado: 30%.</p>
+    <table class="projection-table">
+      <thead>
+        <tr>
+          <th>Fase</th>
+          <th>Apollo SQLs</th>
+          <th>Meta SQLs</th>
+          <th>Google SQLs</th>
+          <th>Total SQLs</th>
+          <th>Deals fechados</th>
+          <th>Receita estimada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Meses 1–3 <span class="scenario-badge sc-setup">Setup</span></td>
+          <td class="proj-num">0</td>
+          <td class="proj-num">15</td>
+          <td class="proj-num">10</td>
+          <td class="proj-num">25</td>
+          <td class="proj-num">7</td>
+          <td class="proj-num proj-highlight">R$1.120.000</td>
+        </tr>
+        <tr>
+          <td>Meses 4–6 <span class="scenario-badge sc-growth">Crescimento</span></td>
+          <td class="proj-num">15</td>
+          <td class="proj-num">30</td>
+          <td class="proj-num">15</td>
+          <td class="proj-num">60</td>
+          <td class="proj-num">18</td>
+          <td class="proj-num proj-highlight">R$2.880.000</td>
+        </tr>
+        <tr>
+          <td>Meses 7–12 <span class="scenario-badge sc-scale">Escala</span></td>
+          <td class="proj-num">30</td>
+          <td class="proj-num">50</td>
+          <td class="proj-num">20</td>
+          <td class="proj-num">100</td>
+          <td class="proj-num">30</td>
+          <td class="proj-num proj-highlight">R$4.800.000/mês</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="projection-note">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span class="tip" data-tip="SQL (Sales Qualified Lead) — lead que passou pela pré-qualificação do sistema BT">SQLs</span> = leads que passam pela pré-qualificação BT (solvência + momento + valor). Close rate 30% é o benchmark para consultoria B2B de alto ticket. Projeções são estimativas conservadoras — não garantias. Dependem da qualidade da base Apollo, criativos aprovados e integração do <span class="tip" data-tip="Customer Relationship Management — sistema de gestão de clientes e deals">CRM</span>para rastreamento.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════ 7. DESTINOS ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Destino dos cliques</div>
+    <h2 class="section-title">3 landing pages — cada uma para um perfil</h2>
+    <p class="section-sub">Hoje tudo vai para a homepage. Cada LP nova é específica para o perfil que vem do anúncio — isso melhora o <span class="tip" data-tip="QS (Quality Score) — nota de qualidade do Google Ads de 1 a 10. Quanto maior, menor o CPC">QS</span> do Google e a taxa de conversão do Meta.</p>
+    <div class="lp-grid">
+      <div class="lp-card" style="border-top: 3px solid var(--apollo);">
+        <span class="lp-card-url">btcreditos.com.br/advogados</span>
+        <h3>LP Advogados — CRIAR</h3>
+        <div class="lp-items">
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Copy focado em fluxo de caixa do escritório — "receba honorários antes do trânsito em julgado"</span>
+          </div>
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Depoimentos de advogados parceiros com valores reais antecipados</span>
+          </div>
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>FAQ de elegibilidade + CTA direto para WhatsApp com tag de rastreamento</span>
+          </div>
+        </div>
+      </div>
+      <div class="lp-card" style="border-top: 3px solid var(--google);">
+        <span class="lp-card-url">btcreditos.com.br/antecipar</span>
+        <h3>LP Reclamante PF — CRIAR</h3>
+        <div class="lp-items">
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Copy emocional: "seu processo pode estar parado, mas sua vida não pode esperar"</span>
+          </div>
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Comparativo visual: esperar 5 anos vs receber agora com deságio — decisão clara</span>
+          </div>
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Pergunta de pré-qualificação antes do formulário ("sua empresa ré ainda está ativa?")</span>
+          </div>
+        </div>
+      </div>
+      <div class="lp-card" style="border-top: 3px solid var(--meta);">
+        <span class="lp-card-url">Meta Lead Form (nativo)</span>
+        <h3>Form Meta — MELHORAR</h3>
+        <div class="lp-items">
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Manter formato nativo (melhor taxa de preenchimento no mobile)</span>
+          </div>
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>Adicionar campo "em qual fase está seu processo?" — filtra inelegíveis antes do CRM</span>
+          </div>
+          <div class="lp-item">
+            <div class="lp-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span><span class="tip" data-tip="Conversions API — rastreamento de conversões server-side do Meta">CAPI</span> instalado para enviar eventos ao servidor — melhora qualidade do sinal do Meta</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PROPOSTA FINANCEIRA ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Proposta financeira</div>
+    <h2 class="section-title">Modelo de remuneração baseado em resultado</h2>
+    <p class="section-sub">Fee base fixo + comissão variável sobre deals digitais fechados. O risco é compartilhado — Ampler só ganha mais quando a BT ganha mais.</p>
+
+    <div class="proposal-grid">
+      <div class="proposal-phase active">
+        <div class="proposal-phase-label">Fase 1 · Setup</div>
+        <h3>Setup &amp; Fundação</h3>
+        <div class="proposal-phase-period">Meses 1–3 · Fee fixo + comissão desde o 1º deal</div>
+        <div class="proposal-fee-row">
+          <span class="proposal-fee-label">Fee mensal fixo</span>
+          <span class="proposal-fee-value">R$4.200</span>
+        </div>
+        <div class="proposal-fee-row">
+          <span class="proposal-fee-label">Comissão sobre deals digitais</span>
+          <span class="proposal-fee-value" style="color:var(--green)">+ 3,5%</span>
+        </div>
+        <div class="proposal-separator"></div>
+        <ul class="proposal-deliverables">
+          <li>Setup Apollo + build da lista (5K advogados)</li>
+          <li>Instalação do <span class="tip" data-tip="Conversions API — rastreamento de conversões server-side do Meta">CAPI</span> no Meta</li>
+          <li>Correção do evento de conversão Google</li>
+          <li>Criação das 2 landing pages dedicadas (Adv + PF)</li>
+          <li>Integração do formulário com o <span class="tip" data-tip="Customer Relationship Management — sistema de gestão de clientes e deals">CRM</span>BT</li>
+          <li>Relatórios semanais + reuniões segunda e sexta (30 min cada)</li>
+        </ul>
+      </div>
+
+      <div class="proposal-phase">
+        <div class="proposal-phase-label">Fase 2 · Escala</div>
+        <h3>Crescimento contínuo</h3>
+        <div class="proposal-phase-period">Mês 4 em diante · Mesmas regras, mais volume</div>
+        <div class="proposal-fee-row">
+          <span class="proposal-fee-label">Fee base</span>
+          <span class="proposal-fee-value">R$4.200</span>
+        </div>
+        <div class="proposal-fee-row">
+          <span class="proposal-fee-label">Comissão sobre deals digitais</span>
+          <span class="proposal-fee-value" style="color:var(--green)">+ 3,5%</span>
+        </div>
+        <div class="proposal-separator"></div>
+        <ul class="proposal-deliverables">
+          <li>3,5% por deal (cai para 3% quando ≥ 3 deals no mesmo mês)</li>
+          <li>0,5% da diferença → verba extra de campanha naquele mês</li>
+
+          <li>A cada 3 deals fechados, verba de mídia sobe R$2K/mês</li>
+          <li>Revisão trimestral dos percentuais conforme crescimento</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payment terms -->
+    <div class="attribution-box" style="margin-top:20px;">
+      <h5>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Prazo de pagamento da comissão
+      </h5>
+      <div class="attribution-list">
+        <div class="attr-item">
+          <div class="attr-dot attr-digital"></div>
+          <span class="attr-text">Comissão paga em até <strong>30 dias</strong> após o fechamento do deal digital</span>
+          <span class="attr-badge attr-yes">Válido desde a Fase 1</span>
+        </div>
+        <div class="attr-item">
+          <div class="attr-dot attr-digital"></div>
+          <span class="attr-text">Acionado pelo registro do deal no <span class="tip" data-tip="Customer Relationship Management — sistema de gestão de clientes e deals">CRM</span>com tag de origem digital</span>
+          <span class="attr-badge attr-yes">Automático</span>
+        </div>
+        <div class="attr-item">
+          <div class="attr-dot attr-org"></div>
+          <span class="attr-text">Deals sem tag de origem digital não geram comissão, independente da fase</span>
+          <span class="attr-badge attr-no">Não comissionado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Investment scaling rule -->
+    <div class="commission-example" style="margin-top:20px;">
+      <h4>Escalonamento automático de verba — a cada 3 deals fechados</h4>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Início (0–2 deals acumulados)</div>
+          <span class="commission-breakdown">Verba de mídia inicial acordada</span>
+        </div>
+        <span class="commission-total" style="color:#94A3B8;">R$4.500/mês</span>
+      </div>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Após 3 deals digitais fechados</div>
+          <span class="commission-breakdown">R$4.500 + R$2.000 de incremento</span>
+        </div>
+        <span class="commission-total c-conserv">R$6.500/mês</span>
+      </div>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Após 6 deals digitais fechados</div>
+          <span class="commission-breakdown">R$6.500 + R$2.000 de incremento</span>
+        </div>
+        <span class="commission-total c-target">R$8.500/mês</span>
+      </div>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Após 9 deals digitais fechados</div>
+          <span class="commission-breakdown">R$8.500 + R$2.000 de incremento</span>
+        </div>
+        <span class="commission-total c-scale">R$10.500/mês</span>
+      </div>
+    </div>
+
+    <!-- Commission examples -->
+    <div class="commission-example">
+      <h4>Exemplos de ganho mensal da Ampler — regra ≥ 3 deals aplicada</h4>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Abaixo do gatilho — 2 deals (taxa 3,5%)</div>
+          <span class="commission-breakdown">2 × R$160K = R$320K · 3,5% = R$11.200 + fee R$4.200</span>
+        </div>
+        <span class="commission-total" style="color:#94A3B8;">R$15.400/mês</span>
+      </div>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Gatilho ativado — 3 deals (taxa cai para 3%)</div>
+          <span class="commission-breakdown">3 × R$480K · 3% = R$14.400 + fee R$4.200 · 0,5% → R$2.400 em verba</span>
+        </div>
+        <span class="commission-total c-conserv">R$18.600/mês</span>
+      </div>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Alvo — 8 deals (taxa 3%)</div>
+          <span class="commission-breakdown">8 × R$160K = R$1,28M · 3% = R$38.400 + fee R$4.200 · 0,5% → R$6.400 em verba</span>
+        </div>
+        <span class="commission-total c-target">R$42.600/mês</span>
+      </div>
+      <div class="commission-row">
+        <div>
+          <div class="commission-scenario">Escala — 15 deals (taxa 3%)</div>
+          <span class="commission-breakdown">15 × R$160K = R$2,4M · 3% = R$72.000 + fee R$4.200 · 0,5% → R$12.000 em verba</span>
+        </div>
+        <span class="commission-total c-scale">R$76.200/mês</span>
+      </div>
+    </div>
+
+    <!-- Reinvestimento 0,5% -->
+    <div style="background:var(--white);border:1px solid var(--slate-300);border-left:4px solid var(--apollo);border-radius:var(--radius);padding:22px 24px;margin-top:20px;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--apollo);margin-bottom:10px;display:flex;align-items:center;gap:7px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        Regra de reinvestimento — ≥ 3 deals no mesmo mês
+      </div>
+      <p style="font-size:14px;color:var(--slate-700);margin-bottom:20px;line-height:1.6;">
+        Quando a Ampler fechar <strong>3 ou mais deals digitais no mesmo mês</strong>, a comissão daquele mês cai de 3,5% para <strong>3%</strong>. Os 0,5% de diferença não ficam com nenhuma das partes — entram automaticamente como <strong>verba extra de campanha</strong> naquele mês, acelerando o próximo ciclo.
+      </p>
+      <table class="projection-table">
+        <thead>
+          <tr>
+            <th>Deals no mês</th>
+            <th>Receita gerada</th>
+            <th>Taxa comissão</th>
+            <th>Ampler (fee + comissão)</th>
+            <th>0,5% → Verba extra</th>
+            <th>Verba total do mês</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 deal</td>
+            <td class="proj-num">R$160.000</td>
+            <td style="text-align:right;color:var(--slate-500);">3,5%</td>
+            <td class="proj-num">R$9.800</td>
+            <td style="text-align:right;color:var(--slate-300);">—</td>
+            <td class="proj-num">R$4.500</td>
+          </tr>
+          <tr>
+            <td>2 deals</td>
+            <td class="proj-num">R$320.000</td>
+            <td style="text-align:right;color:var(--slate-500);">3,5%</td>
+            <td class="proj-num">R$15.400</td>
+            <td style="text-align:right;color:var(--slate-300);">—</td>
+            <td class="proj-num">R$4.500</td>
+          </tr>
+          <tr style="font-weight:600;">
+            <td>3 deals <span style="font-size:10px;font-weight:700;background:#FFF7ED;color:var(--apollo);padding:1px 6px;border-radius:4px;margin-left:4px;">GATILHO</span></td>
+            <td class="proj-num">R$480.000</td>
+            <td style="text-align:right;color:var(--green);font-weight:700;">3%</td>
+            <td class="proj-num" style="color:var(--green);">R$18.600</td>
+            <td class="proj-num" style="color:var(--apollo);">R$2.400</td>
+            <td class="proj-num" style="color:var(--apollo);">R$6.900</td>
+          </tr>
+          <tr>
+            <td>5 deals</td>
+            <td class="proj-num">R$800.000</td>
+            <td style="text-align:right;color:var(--green);font-weight:600;">3%</td>
+            <td class="proj-num">R$28.200</td>
+            <td class="proj-num" style="color:var(--apollo);">R$4.000</td>
+            <td class="proj-num" style="color:var(--apollo);">R$8.500</td>
+          </tr>
+          <tr>
+            <td>8 deals</td>
+            <td class="proj-num">R$1.280.000</td>
+            <td style="text-align:right;color:var(--green);font-weight:600;">3%</td>
+            <td class="proj-num">R$42.600</td>
+            <td class="proj-num" style="color:var(--apollo);">R$6.400</td>
+            <td class="proj-num" style="color:var(--apollo);">R$10.900</td>
+          </tr>
+          <tr>
+            <td>12 deals</td>
+            <td class="proj-num">R$1.920.000</td>
+            <td style="text-align:right;color:var(--green);font-weight:600;">3%</td>
+            <td class="proj-num">R$61.800</td>
+            <td class="proj-num" style="color:var(--apollo);">R$9.600</td>
+            <td class="proj-num" style="color:var(--apollo);">R$14.100</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:12px;color:var(--slate-500);margin-top:10px;line-height:1.5;">
+        Verba base: R$4.500/mês. Verba extra = 0,5% da receita daquele mês quando ≥ 3 deals. A verba extra é aplicada no mês corrente. A regra vale a partir de qualquer fase do contrato.
+      </p>
+    </div>
+
+    <!-- Attribution model -->
+    <div class="attribution-box">
+      <h5>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Modelo de atribuição — o que conta como "deal digital"
+      </h5>
+      <div class="attribution-list">
+        <div class="attr-item">
+          <div class="attr-dot attr-digital"></div>
+          <span class="attr-text">Lead veio via Google Ads (UTM rastreado no CRM)</span>
+          <span class="attr-badge attr-yes">Comissionado</span>
+        </div>
+        <div class="attr-item">
+          <div class="attr-dot attr-digital"></div>
+          <span class="attr-text">Lead veio via Meta Ads — formulário ou LP</span>
+          <span class="attr-badge attr-yes">Comissionado</span>
+        </div>
+        <div class="attr-item">
+          <div class="attr-dot attr-digital"></div>
+          <span class="attr-text">Lead abriu email do Apollo e converteu</span>
+          <span class="attr-badge attr-yes">Comissionado</span>
+        </div>
+        <div class="attr-item">
+          <div class="attr-dot attr-org"></div>
+          <span class="attr-text">Lead orgânico / SEO / direto / indicação / SDR BT</span>
+          <span class="attr-badge attr-no">Não comissionado</span>
+        </div>
+        <div class="attr-item">
+          <div class="attr-dot attr-org"></div>
+          <span class="attr-text">Originadores parceiros existentes</span>
+          <span class="attr-badge attr-no">Não comissionado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 8. PRÓXIMOS PASSOS ════════════════ -->
+<section>
+  <div class="container">
+    <div class="section-label">Para começar</div>
+    <h2 class="section-title">Plano de ação — 8 passos para o primeiro mês</h2>
+    <p class="section-sub">As primeiras 3 ações são responsabilidade conjunta. Os passos seguintes são executados pela Ampler assim que os acessos forem liberados.</p>
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">1</div>
+        <div class="check-text">
+          <strong>Validação da proposta e assinatura do contrato</strong>
+          <span>Definir metas mensais de SQLs, acordar modelo de atribuição e assinar o acordo de prestação de serviços com cláusula de performance.</span>
+        </div>
+        <span class="check-owner owner-both">BT + Ampler</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">2</div>
+        <div class="check-text">
+          <strong>Acesso às plataformas</strong>
+          <span>Google Ads, Meta Business Manager, painel BT para integração do formulário. Sem acesso não é possível fazer as correções críticas.</span>
+        </div>
+        <span class="check-owner owner-bt">BT libera</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">3</div>
+        <div class="check-text">
+          <strong>Setup de rastreamento — <span class="tip" data-tip="Conversions API — rastreamento de conversões server-side do Meta">CAPI</span> + <span class="tip" data-tip="UTMs — parâmetros na URL que identificam a origem de cada visita (ex: utm_source=meta)">UTMs</span> + conversão Google</strong>
+          <span>Instalar API de Conversões Meta, corrigir evento de conversão Google (hoje 119% <span class="tip" data-tip="CVR (Conversion Rate) — taxa de conversão: conversões ÷ cliques. Acima de 100% indica erro no rastreamento">CVR</span> = inválido), criar estrutura de <span class="tip" data-tip="UTMs — parâmetros na URL que identificam a origem de cada visita (ex: utm_source=meta)">UTMs</span> para rastreamento de atribuição no <span class="tip" data-tip="Customer Relationship Management — sistema de gestão de clientes e deals">CRM</span>.</span>
+        </div>
+        <span class="check-owner owner-ampler">Ampler executa</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">4</div>
+        <div class="check-text">
+          <strong>Apollo setup — lista de 5K advogados trabalhistas</strong>
+          <span>Configurar filtros (cargo + setor + país + tamanho empresa), verificar emails, configurar sequências de 4 emails e exportar CSV para Meta e Google como Custom Audience.</span>
+        </div>
+        <span class="check-owner owner-ampler">Ampler executa</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">5</div>
+        <div class="check-text">
+          <strong>LPs dedicadas — Advogados + PF Reclamante</strong>
+          <span>Criar as 2 landing pages com copy específico por intenção. Integrar formulários direto ao sistema BT (eliminar a planilha manual). Configurar resposta automática para inelegíveis.</span>
+        </div>
+        <span class="check-owner owner-ampler">Ampler executa</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">6</div>
+        <div class="check-text">
+          <strong>Primeiro report semanal (segunda-feira)</strong>
+          <span>Apresentação dos primeiros números: o que foi configurado, quais campanhas estão ativas, métricas de semana 1 e ajustes planejados para a semana seguinte.</span>
+        </div>
+        <span class="check-owner owner-both">BT + Ampler</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div class="check-num">7</div>
+        <div class="check-text">
+          <strong>Revisão 30 dias — decisão sobre Fase 2</strong>
+          <span>Análise dos primeiros SQLs gerados, custo por SQL por canal, ajustes na cadência Apollo, revisão do modelo de atribuição e confirmação da entrada na Fase 2 (comissionada).</span>
+        </div>
+        <span class="check-owner owner-both">BT + Ampler</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>
+      <strong>Proposta válida por 15 dias · Ampler — Nei Maciel · nei@ampler.me</strong><br>
+      Modelo de comissão aplicável a deals com origem digital rastreável via <span class="tip" data-tip="UTM — parâmetros na URL que identificam a origem de cada visita (ex: utm_source=meta)">UTM</span> integrado ao <span class="tip" data-tip="Customer Relationship Management — sistema de gestão de clientes e deals">CRM</span>BT. BT Créditos se compromete com acesso às plataformas, integração do <span class="tip" data-tip="Customer Relationship Management — sistema de gestão de clientes e deals">CRM</span>e definição de metas mensais. Ampler se compromete com relatórios semanais, transparência de dados e disponibilidade nas reuniões segunda e sexta (30 min cada). LGPD: toda captação seguirá a Lei 13.709/18 e regulamentações OAB aplicáveis à prospecção B2B. As projeções são estimativas baseadas em benchmarks de mercado e não constituem garantia de resultado.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
